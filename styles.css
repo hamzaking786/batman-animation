@@ -1,0 +1,217 @@
+/* Global styles */
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+img {
+    position: relative;
+    display: block;
+}
+a {
+    text-decoration: none;
+    color: rgba(255,255,255,.5);
+}
+a:hover {
+    color: rgb(255,255,255);
+}
+
+/* Background Slider */
+
+.page-slider{
+    max-width: 100%;
+    height: 768px;
+    animation: slide 10s infinite;
+    background: url(images/BM1.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.slider-text {
+    height: 768px;
+    background-color: rgba(0,0,0,.2);
+}
+.batcave-link {
+    display: block;
+    width: 50%;
+    padding: 75px 100px;
+    text-align: center;
+    position: relative;
+    top: 250px;
+    margin: 0 auto;
+    font-size: 26px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.batcave-link:hover {
+    animation: border 5s infinite;
+    color: rgb(255, 255, 255);
+    transition: all 2s ease-in-out;
+    transform: scale(1.5); 
+}
+
+/* Header/navbar styles */
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(0,0,0,.8);
+    width: 100%;
+    height: 75px;
+    z-index: 1;
+}
+.nav {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    margin-right: 15%;
+}
+#logo {
+    flex: 1 1 auto;
+    margin-left: 10%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 35px;
+}
+.nav li a {
+    margin: 15px;
+    color: rgb(254, 254, 254);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.nav li a:hover {
+    border-bottom: 1px solid rgba(255, 255, 255);
+}
+
+/* Main content */
+
+.info-area, .film-area, .spill-area, .more-area{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+       
+.info-area, .spill-area{
+    background-color: #fefefe;
+}
+.film-area, .more-area{
+    background-color: rgb(38, 38, 38);
+    color: rgb(255, 255, 255);
+}
+.text-part h2 {
+    text-align: center;
+}
+.text-part {
+    width: 50%;
+}
+.main-page-hero {
+    background: url(images/btcave-img.jpg) no-repeat;
+    max-width: 100%;
+    height: 768px;
+    background-size: 100% 100%;
+}
+
+/* Animations */
+
+@keyframes slide {
+      25% {
+        background: url(../images/BM1.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    } 50% {
+        background: url(../images/BM2.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    } 75% {
+        background: url(../images/BM3.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+@keyframes border {
+      0% {
+        box-shadow: 0px 0px 4px rgb(255,255,255);
+        background-color: rgba(0,0,0,.1); 
+    } 25% {
+        box-shadow: 0px 0px 8px rgb(255,255,255);
+        background-color: rgba(0,0,0,.3); 
+    } 50% {
+        box-shadow: 0px 0px 12px rgb(255,255,255);
+        background-color: rgba(0,0,0,.5);
+    } 75% {
+        box-shadow: 0px 0px 8px rgb(255,255,255);
+        background-color: rgba(0,0,0,.3);
+    } 100% {
+        box-shadow: 0px 0px 4px rgb(255,255,255);
+        background-color: rgba(0,0,0,.1);
+    }
+}
+
+@keyframes underline {
+      0%   { 
+        width : 0;
+    } 100% { 
+        width: 100%;
+    }
+}
+
+
+/*  animation styles */
+
+.underline {
+  position: relative;
+}
+.underline:hover::after {
+    content: ' ';
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: white;
+    animation-name: underline;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
+}
+
+/* icons */
+.batman-icon {
+    position: relative;
+    height: 200px;
+    top: 35%;
+    left: 50%;
+    cursor: pointer;
+    transition-duration: 3s;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+.the-joker-icon {
+    position: relative;
+    height: 200px;
+    top: 50%;
+    left: 80%;
+    cursor: pointer;
+    transition-duration: 3s;
+    transition-property: all;
+    transition-timing-function: ease;
+}
+.batman-icon:hover {
+    transform: scale(2);
+}
+.the-joker-icon:hover {
+    transform: scale(2);
+}
